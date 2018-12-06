@@ -1,0 +1,47 @@
+.nav__wrapper {
+	width: 100%;
+	display: flex;
+    align-items: center;
+}
+
+nav {
+	ul {
+	position: relative;
+
+	> li {
+		display: inline-block;
+		
+		&:last-child{
+			position: absolute;
+			right: 0;
+
+			.buy {
+				background: #7db9e8;
+				background: -moz-linear-gradient(top, #a4edfe 7%, #7fe0ff 88%);
+				background: -webkit-linear-gradient(top, #a4edfe 7%,#7fe0ff 88%); 
+				background: linear-gradient(to bottom, #a4edfe 7%,#7fe0ff 88%);
+				border-radius: 3rem;
+				height: 1rem;
+				width: 3rem;
+				text-align: center;
+				padding: 0.5rem 1rem 1rem 1rem;
+				color: white;
+			}
+		}
+
+		a {
+			font-family: $primary-nav-font-family;
+			font-size:1rem;
+			display: block;
+			transition: color .25s ease-out;
+			color:black;
+			padding:2.1rem 1.35rem;
+
+			&:hover, &.active {
+				background: $hot-pink;
+				color: white;
+			}
+		}
+	}
+	}
+}

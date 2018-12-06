@@ -1,0 +1,61 @@
+$mq-xsmall-width: 30em;
+$mq-small-width: 48em;
+$mq-medium-width: 64em;
+$mq-large-width: 75em;
+$base-font-size: 16;
+
+@function em($pixels, $context: $base-font-size) {
+  @return ($pixels / $context) * 1em;
+}
+
+@function rem($pixels, $context: $base-font-size) {
+  @return ($pixels / $context) * 1rem;
+}
+
+@mixin xsmall-and-up {
+  @media only screen and (min-width: #{$mq-xsmall-width}) {
+    @content;
+  }
+}
+
+@mixin xsmall-only {
+  @media (min-width: #{$mq-xsmall-width}) and (max-width: #{$mq-small-width - 1em}) {
+    @content;
+  }
+}
+
+@mixin small-and-up {
+  @media only screen and (min-width: #{$mq-small-width}) {
+    @content;
+  }
+}
+
+@mixin small-only {
+  @media (min-width: #{$mq-small-width}) and (max-width: #{$mq-medium-width - 1em}) {
+    @content;
+  }
+}
+
+@mixin medium-and-up {
+  @media only screen and (min-width: #{$mq-medium-width}) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media (min-width: #{$mq-medium-width}) and (max-width: #{$mq-large-width - 1em}) {
+    @content;
+  }
+}
+
+@mixin xsmall-up-to-large {
+  @media (min-width: #{$mq-xsmall-width}) and (max-width: #{$mq-large-width - 1em}) {
+    @content;
+  }
+}
+
+@mixin large-and-up {
+  @media only screen and (min-width: #{$mq-large-width}) {
+    @content;
+  }
+}

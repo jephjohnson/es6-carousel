@@ -1,0 +1,31 @@
+.hero {
+    background: url(/assets/images/hero.jpg) center center;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 240px;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+
+    @include small-and-up {
+        min-height: 640px;
+    }
+
+    h1 {
+        display: none;
+
+        @include small-and-up {
+            display: block;
+            font-size: $headline;
+            line-height: rem(132);
+            font-family: $headline-font-family;
+            line-height: rem(132);
+            text-align: center;
+            color:white;
+            max-width: 800px;
+        }
+    }
+}
